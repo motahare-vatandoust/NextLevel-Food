@@ -30,6 +30,7 @@ export default function ImagePicker({ label, name }) {
       <div className={classes.controls}>
         <div className={classes.preview}>
           {!pickedImage && <p>No image picked yet.</p>}
+          {/* image cannot load in production, use AWS S3 to save photos! */}
           {pickedImage && (
             <Image
               src={pickedImage}
